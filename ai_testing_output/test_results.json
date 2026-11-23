@@ -1,0 +1,259 @@
+{
+  "timestamp_utc": "2026-11-23T20:32:35.738952+00:00",
+  "project": "/Users/ashimpandey/Desktop/Research/RaAAR_Research_Code_Complete",
+  "total": 17,
+  "passed": 17,
+  "failed": 0,
+  "results": [
+    {
+      "id": "TC01-current-support",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.029,
+      "expected": {
+        "status": "supported",
+        "decision": "resolve"
+      },
+      "observed": {
+        "status": "supported",
+        "decision": "resolve"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC02-no-evidence",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0,
+      "expected": {
+        "status": "missing",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "missing",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC03-superseded-evidence",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0001,
+      "expected": {
+        "status": "outdated",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "outdated",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC04-conflicting-claims",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0002,
+      "expected": {
+        "status": "contradictory",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "contradictory",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC05-current-refutation",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0002,
+      "expected": {
+        "status": "refuted",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "refuted",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC06-low-score",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0001,
+      "expected": {
+        "status": "supported",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "supported",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC07-unknown-authority",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0001,
+      "expected": {
+        "status": "missing",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "missing",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC08-wrong-candidate",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0,
+      "expected": {
+        "status": "missing",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "missing",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC09-old-negative-current-positive",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0002,
+      "expected": {
+        "status": "supported",
+        "decision": "resolve"
+      },
+      "observed": {
+        "status": "supported",
+        "decision": "resolve"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC10-threshold-boundary",
+      "kind": "facts",
+      "outcome": "PASS",
+      "seconds": 0.0001,
+      "expected": {
+        "status": "supported",
+        "decision": "resolve"
+      },
+      "observed": {
+        "status": "supported",
+        "decision": "resolve"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC11-extract-polarity",
+      "kind": "extract",
+      "outcome": "PASS",
+      "seconds": 0.0022,
+      "expected": [
+        true,
+        false
+      ],
+      "observed": [
+        true,
+        false
+      ],
+      "passed": true
+    },
+    {
+      "id": "TC12-extract-nonmatching",
+      "kind": "extract",
+      "outcome": "PASS",
+      "seconds": 0.0,
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "id": "TC-document-supported",
+      "kind": "manifest",
+      "outcome": "PASS",
+      "seconds": 0.0054,
+      "expected": {
+        "status": "supported",
+        "decision": "resolve"
+      },
+      "observed": {
+        "status": "supported",
+        "decision": "resolve"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC-document-missing",
+      "kind": "manifest",
+      "outcome": "PASS",
+      "seconds": 0.0051,
+      "expected": {
+        "status": "missing",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "missing",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC-document-outdated",
+      "kind": "manifest",
+      "outcome": "PASS",
+      "seconds": 0.0044,
+      "expected": {
+        "status": "outdated",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "outdated",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC-document-contradictory",
+      "kind": "manifest",
+      "outcome": "PASS",
+      "seconds": 0.0186,
+      "expected": {
+        "status": "contradictory",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "contradictory",
+        "decision": "human_review"
+      },
+      "passed": true
+    },
+    {
+      "id": "TC-document-refuted",
+      "kind": "manifest",
+      "outcome": "PASS",
+      "seconds": 0.0044,
+      "expected": {
+        "status": "refuted",
+        "decision": "human_review"
+      },
+      "observed": {
+        "status": "refuted",
+        "decision": "human_review"
+      },
+      "passed": true
+    }
+  ],
+  "source": "human-approved declarative test specifications"
+}

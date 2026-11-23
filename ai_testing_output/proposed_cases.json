@@ -1,0 +1,344 @@
+{
+  "cases": [
+    {
+      "id": "TC01-current-support",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": true,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.9,
+      "min_score": 0.65,
+      "expected_status": "supported",
+      "expected_decision": "resolve"
+    },
+    {
+      "id": "TC02-no-evidence",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [],
+      "score": 0.95,
+      "min_score": 0.65,
+      "expected_status": "missing",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC03-superseded-evidence",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": true,
+          "valid_versions": [
+            "1.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": "v2",
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.95,
+      "min_score": 0.65,
+      "expected_status": "outdated",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC04-conflicting-claims",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": true,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        },
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": false,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.95,
+      "min_score": 0.65,
+      "expected_status": "contradictory",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC05-current-refutation",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": false,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.95,
+      "min_score": 0.65,
+      "expected_status": "refuted",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC06-low-score",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": true,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.4,
+      "min_score": 0.65,
+      "expected_status": "supported",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC07-unknown-authority",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": true,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "unknown",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.95,
+      "min_score": 0.65,
+      "expected_status": "missing",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC08-wrong-candidate",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "display",
+          "capability": "measure_temperature",
+          "polarity": true,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.9,
+      "min_score": 0.65,
+      "expected_status": "missing",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC09-old-negative-current-positive",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": true,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        },
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": false,
+          "valid_versions": [
+            "1.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.9,
+      "min_score": 0.65,
+      "expected_status": "supported",
+      "expected_decision": "resolve"
+    },
+    {
+      "id": "TC10-threshold-boundary",
+      "kind": "facts",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "facts": [
+        {
+          "source_id": "agent_fixture",
+          "candidate": "sensor",
+          "capability": "measure_temperature",
+          "polarity": true,
+          "valid_versions": [
+            "2.0"
+          ],
+          "authority": "authoritative",
+          "superseded_by": null,
+          "excerpt": "Controlled test fixture"
+        }
+      ],
+      "score": 0.65,
+      "min_score": 0.65,
+      "expected_status": "supported",
+      "expected_decision": "resolve"
+    },
+    {
+      "id": "TC11-extract-polarity",
+      "kind": "extract",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "text": "The sensor measures temperature. The sensor does not measure temperature.",
+      "expected_polarities": [
+        true,
+        false
+      ]
+    },
+    {
+      "id": "TC12-extract-nonmatching",
+      "kind": "extract",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "text": "The display measures temperature.",
+      "expected_polarities": []
+    },
+    {
+      "id": "TC-document-supported",
+      "kind": "manifest",
+      "scenario": "supported",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "score": 0.82,
+      "min_score": 0.65,
+      "expected_status": "supported",
+      "expected_decision": "resolve"
+    },
+    {
+      "id": "TC-document-missing",
+      "kind": "manifest",
+      "scenario": "missing",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "score": 0.82,
+      "min_score": 0.65,
+      "expected_status": "missing",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC-document-outdated",
+      "kind": "manifest",
+      "scenario": "outdated",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "score": 0.82,
+      "min_score": 0.65,
+      "expected_status": "outdated",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC-document-contradictory",
+      "kind": "manifest",
+      "scenario": "contradictory",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "score": 0.82,
+      "min_score": 0.65,
+      "expected_status": "contradictory",
+      "expected_decision": "human_review"
+    },
+    {
+      "id": "TC-document-refuted",
+      "kind": "manifest",
+      "scenario": "refuted",
+      "candidate": "sensor",
+      "capability": "measure_temperature",
+      "version": "2.0",
+      "score": 0.82,
+      "min_score": 0.65,
+      "expected_status": "refuted",
+      "expected_decision": "human_review"
+    }
+  ]
+}
